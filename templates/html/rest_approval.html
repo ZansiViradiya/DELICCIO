@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Thank you to registration</h1>
+    <hr></hr>
+    <p>
+    Hi {{username}}, we have received your details and your restaurant has been successfully approved.
+    </p>
+    <p>Please! check your restaurant details</p>
+    <ul>
+        <li>Restaurant:-  {{restaurant}}</li>
+        <li>Owner Name:- {{owner_name}}</li>
+        <li>Owner Email:- {{owner_email}}</li>
+        <li>Open time:- {{open}}</li>
+        <li>Closed time:-  {{closed}}</li>
+        {% comment %} <li>Address:- {{address}}</li> {% endcomment %}
+        <li>Holidays:- {% for data in holidays %}{{data}}{% endfor %}</li>
+    </ul>
+</body>
+</html>
