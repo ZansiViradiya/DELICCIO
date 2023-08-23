@@ -18,7 +18,7 @@ class Order(TimeStamp):
     email = models.EmailField(max_length=100)
     total_item = models.IntegerField()
     total_price = models.IntegerField()
-    date = models.DateTimeField(auto_now=True)
+    date = models.DateTimeField(auto_now=True, null=True, blank=True,)
     payment_method = models.CharField(max_length=10, default="cash")
     delivery_boy = models.ForeignKey(Delivery, null=True, blank=True, on_delete=models.CASCADE)
     delivery_on = models.DateTimeField(auto_now=True)
